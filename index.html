@@ -1,85 +1,74 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="google-site-verification" content="NPAHZu9a4Gbh6RqGHWcj6LmBThIn_xiISpRsxm_tIIs">
-    <title>Till Theis</title>
+---
+layout: default
+projects:
+  - path:        timetable-widget
+    icon:        assets/icons/timetable-widget-icon.png
+    title:       Timetable Widget
+    description: Display your timetable on your dashboard. Never miss a class again (without wanting to).
+  - path:        pile-the-pieces
+    icon:        assets/icons/pile-the-pieces-icon.png
+    title:       Pile the Pieces
+    description: You know this game. Play it in your browser now without any plugins. It's implemented using the latest HTML5 technology.
+  - path:        fullscreenclock
+    icon:        assets/icons/fullscreenclock-icon.png
+    title:       Fullscreen Clock
+    description: Display a clock on all of your inactive screens when running an application in fullscreen mode.
+  - path:        propositional-logic
+    icon:        https://placehold.it/128x128
+    title:       Propositional Logic
+    description: Generate all the normal forms for a given formula.
+  - path:        bachelor-thesis
+    icon:        https://placehold.it/128x128
+    title:       Bachelor Thesis
+    description: Das Play-Framework und dessen Einsatz zur Entwicklung von Real-Time-Web-Anwendungen (en. The Play Framework and its Use for Developing Real-Time Web Applications) is the title of my bachelor thesis in computer science (German).
+  - path:        typed-rescue
+    icon:        https://placehold.it/128x128
+    title:       Typed Rescue
+    description: Helicopter action for the special people.
+---
+<div class="row projects">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <style>
-      h1, h2 {
-        clear: left;
-      }
+  {% for project in page.projects %}
 
-      h2 + p img {
-        float: left;
-        margin-right: 22px;
-        margin-bottom: 22px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1 class="header">Till Theis</h1>
-        <p class="header"></p>
-
-
-
-        <ul>
-          <li><a class="buttons github" href="https://github.com/tilltheis">GitHub Profile</a></li>
-        </ul>
-
-      </header>
-      <section>
-        <h1>Projects</h1>
-
-<h2>Timetable Widget</h2>
-
-<p><img src="images/timetable-widget-icon.png" alt="Timetable Widget Icon">
-Display your timetable on your dashboard. Never miss a class again (without wanting to).<br><a href="/timetable-widget/">Details ...</a></p>
-
-<h2>Pile the Pieces</h2>
-
-<p><img src="images/pile-the-pieces-icon.png" alt="Pile the Pieces Icon">
-You know this game. Play it in your browser now without any plugins. It's implemented using the newest HTML5 technology.<br><a href="/pile-the-pieces/">Details ...</a></p>
-
-<h2>Fullscreen Clock</h2>
-
-<p><img src="images/fullscreenclock-icon.png" alt="Fullscreen Clock Icon">
-Display a clock on all of your inactive screens when running an application in fullscreen mode.<br><a href="/fullscreenclock/">Details ...</a></p>
-
-<h2>Propositional Logic</h2>
-<p>Generate all the normal forms for a given formula.<br><a href="/propositional-logic/">Details ...</a></p>
-
-<h2>Bachelor Thesis</h2>
-<p>Das Play-Framework und dessen Einsatz zur Entwicklung von Real-Time-Web-Anwendungen (en. The Play Framework and its Use for Developing Real-Time Web Applications) is the title of my bachelor thesis in computer science (German).<br><a href="/bachelor-thesis/">Details  ...</a></p>
-
-<h1 id="about">About me</h1>
-
-<p>My name is Till Theis and I'm a student from Hamburg, Germany.</p>
-
-<p>Follow me on <a href="http://twitter.com/tilltheis">Twitter</a> or visit my <a href="https://github.com/tilltheis">GitHub</a> profile.</p>
-
-<p>If you want to get in contact with me feel free to send me some lines to the following address:<br>
-theis.till AT gmail DOT com</p>
-
-<h1>Disclaimer</h1>
-
-<p>Information on this website is provided without any warranty and its usage is completely at your own risk. I can not been hold responsible for usage or misusage of any data, provided here. I do not own any trademarks which may be mentioned on this site. All trademarks belong to their respective owners.</p>
-      </section>
-      <footer>
-        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
-      </footer>
+    <div class="col-md-6">
+      <a href="/{{ project.path }}/">
+        <div class="panel panel-default project">
+          <div class="panel-body">
+            <div class="media">
+              <div class="media-left">
+                <img class="media-object" src="{{ project.icon }}" alt="{{ project.title }} Icon" width="128" height="128">
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading">{{ project.title }}</h3>
+                <p>{{ project.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
 
-  </body>
-</html>
+  {% endfor %}
+
+</div>
+
+<div class="well well-sm">
+  Information on this website is provided without any warranty and its usage is completely at your own risk. I can not be held responsible for usage or misusage of any data, provided here. I do not own any trademarks which may be mentioned on this site. All trademarks belong to their respective owners.
+</div>
+
+<script>
+  // Beauty has its price...
+  // Make all project thumbnails in a row the same height.
+  window.onresize = function() {
+    var thumbnails = document.querySelectorAll('.project');
+    [].forEach.call(thumbnails, function(x) { x.style.height = null; });
+    if (window.innerWidth >= 768) {
+      for (var i = 0; i < thumbnails.length - 1; i += 2) {
+        var maxHeight = Math.max(thumbnails[i].offsetHeight, thumbnails[i + 1].offsetHeight);
+        thumbnails[i].style.height = maxHeight + 'px';
+        thumbnails[i + 1].style.height = maxHeight + 'px';
+      }
+    }
+  };
+  window.onload = window.onresize;
+</script>
