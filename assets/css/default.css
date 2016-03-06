@@ -2,6 +2,7 @@ body {
   color: #303f4a;
   font-size: 16px;
   font-family: "PT Sans", "Helvetica Neue", "sans-serif";
+  -moz-osx-font-smoothing: grayscale; /* don't let ff draw fonts too bold */
 }
 
 header {
