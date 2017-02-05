@@ -118,3 +118,7 @@ footer {
 .alert-info {
   background-color: lighten($bgColor4, 7);
 }
+
+ul.keywords li:before {
+  content: "#";
+}

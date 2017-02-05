@@ -1,0 +1,48 @@
+---
+layout: default
+actions:
+  - title: Download PDF
+    url: http://tilltheis.de/bachelor-thesis/thesis.pdf
+  - title: View Scala Source
+    url: https://github.com/tilltheis/bachelor-thesis/tree/master/code
+  - title: View LaTeX Source
+    url: https://github.com/tilltheis/bachelor-thesis/tree/master/thesis
+---
+{% include project-summary.html project=site.data.projects.bachelorThesis actions=page.actions %}
+
+<div class="row">
+  <div class="col-md-6">
+    <h2>The Play Framework and its Use for Developing Real-Time Web Applications</h2>
+    <ul class="list-inline keywords">
+      <li>Play</li>
+      <li>Scala</li>
+      <li>Real-Time Web</li>
+      <li>Reactive</li>
+      <li>Functional Programming</li>
+      <li>Iteratees</li>
+    </ul>
+    <p>
+      This thesis is an introduction to the Play framework and focuses on its features for developing real-time web applications.
+      Real-time web applications are applications that push information to the user as soon as the server receives them instead of requiring the user to manually reload the page.
+      In order to achieve that Play ships with an Iteratee library that makes it possible to reactively and incrementally process data streams.
+      These Iteratee streams as well as their design and application possibilities will be explained to finally develop an application that builds on them.
+    </p>
+  </div>
+  <div class="col-md-6">
+    <h2>Das Play-Framework und dessen Einsatz zur Entwicklung von Real-Time-Web-Anwendungen</h2>
+    <ul class="list-inline keywords">
+      <li>Play</li>
+      <li>Scala</li>
+      <li>Real-Time-Web</li>
+      <li>Reaktiv</li>
+      <li>Funktionale Programmierung</li>
+      <li>Iteratees</li>
+    </ul>
+    <p>
+      Diese Arbeit stellt das Play Framework vor und legt ihren Schwerpunkt dabei auf die Entwicklung von Real-Time-Web-Anwendungen.
+      Dies sind interaktive Anwendungen, die dem Nutzer Daten anzeigen, sobald sie dem Server bekannt werden und nicht erst, wenn der Nutzer die Seite neu lädt.
+      Um dies zu erreichen, stellt Play eine Iteratee-Bibliothek zur Verfügung, die es ermöglicht Datenströme reaktiv und inkrementell zu verarbeiten.
+      Diese Iteratee-Streams werden mitsamt ihren Designentscheidungen und Anwendungsmöglichkeiten erläutert, um anschließend eine Anwendung auf Basis von ihnen zu entwickeln.
+    </p>
+  </div>
+</div> 

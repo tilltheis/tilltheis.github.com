@@ -1,0 +1,16 @@
+<div class="row summary">
+  <div class="col-md-2 icon">
+    <img src="{{ include.project.icon }}" alt="{{ include.project.title }} Icon" width="128" height="128">
+  </div>
+  <div class="col-md-7 description">
+    <h3>{{ include.project.title }}</h3>
+    <p>{{ include.project.description }}</p>
+  </div>
+  <div class="col-md-3 actions">
+    <a href="{{ include.actions[0].url }}" class="btn btn-primary btn-block">{{ include.actions[0].title }}</a>
+    {% for action in include.actions offset:1 %}
+    <a href="{{ action.url }}" class="btn btn-default btn-block">{{ action.title }}</a>
+    {% endfor %}
+  </div>
+</div>
+<hr>
