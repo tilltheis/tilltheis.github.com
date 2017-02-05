@@ -1,0 +1,35 @@
+typingChallenge:
+  path:        TypingChallenge
+  icon:        /assets/icons/typing-challenge-icon.png
+  title:       Typing Challenge
+  description: How fast can you type?
+typedRescue:
+  path:        typed-rescue
+  icon:        /assets/icons/typed-rescue-icon.png
+  title:       Typed Rescue
+  description: Simple 2D side-scroller.
+fullscreenClock:
+  path:        fullscreenclock
+  icon:        /assets/icons/fullscreenclock-icon.png
+  title:       Fullscreen Clock
+  description: Automatically display a clock on all of your inactive screens when running an application in fullscreen mode.
+pileThePieces:
+  path:        pile-the-pieces
+  icon:        /assets/icons/pile-the-pieces-icon.png
+  title:       Pile the Pieces
+  description: You know this game. Play it in your browser now without any plugins. It's implemented using the latest HTML5 technology.
+propositionalLogic:
+  path:        propositional-logic
+  icon:        /assets/icons/propositional-logic-icon.png
+  title:       Propositional Logic
+  description: Generate all the normal forms for a given formula.
+bachelorThesis:
+  path:        bachelor-thesis
+  icon:        /assets/icons/bachelor-thesis-icon.png
+  title:       Bachelor Thesis
+  description: Das Play-Framework und dessen Einsatz zur Entwicklung von Real-Time-Web-Anwendungen (en. The Play Framework and its Use for Developing Real-Time Web Applications) is the title of my bachelor thesis in computer science (German).
+timetableWidget:
+  path:        timetable-widget
+  icon:        /assets/icons/timetable-widget-icon.png
+  title:       Timetable Widget
+  description: Display your timetable on your dashboard. Never miss a class again (without wanting to).

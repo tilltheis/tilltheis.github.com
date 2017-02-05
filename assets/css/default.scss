@@ -1,0 +1,120 @@
+---
+---
+
+$fgColor: #303f4a;
+
+$bgColor1: #F2EEF5; // light grey blue
+$bgColor2: #D1D2E8; // grey blue
+$bgColor3: #F8FCFF; // whitish
+$bgColor4: #D1E8E5; // dark grey blue
+$bgColor5: #BCF2CD; // light green grey blue
+
+body {
+  background-color: $bgColor3;
+  color: $fgColor;
+  font-size: 16px;
+  font-family: "PT Sans", "Helvetica Neue", "sans-serif";
+  -moz-osx-font-smoothing: grayscale; /* don't let ff draw fonts too bold */
+}
+
+header {
+  font-family: "Lato", "Helvetica Neue", "sans-serif";
+}
+
+header h1 {
+  letter-spacing: 1px;
+}
+
+header h1 a:active, header h1 a:hover, header h1 a:focus {
+  background: none;
+}
+
+.project {
+  h3 {
+    font-family: "Lato";
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0;
+  }
+
+  img {
+    margin: 0 10px 0 0;
+    float: left;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.projects a {
+  display: block;
+}
+
+a, a:focus, .nav li a {
+  color: $fgColor;
+  background: transparent;
+}
+
+a:hover, .nav li a:hover, .nav li a:focus {
+  background: $bgColor1;
+  color: $fgColor;
+}
+
+a:active, .nav li a:active {
+  background: darken($bgColor1, 10);
+}
+
+a, a:hover, a:active, a:focus {
+  text-decoration: none;
+}
+
+.panel-default, .panel-default:active {
+  background: transparent;
+}
+
+.well {
+  background: lighten($bgColor1, 2);
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.summary {
+  .icon {
+    text-align: center;
+  }
+
+  .actions {
+    .btn-primary {
+      background-color: $bgColor5;
+      color: $fgColor;
+      border-color: darken($bgColor5, 50);
+    }
+    .btn-primary:hover, btn-primary:focus {
+      background-color: darken($bgColor5, 10);
+    }
+    .btn-primary:active {
+      background-color: darken($bgColor5, 20);
+      color: $bgColor3;
+    }
+    
+    .btn-default {
+      background-color: $bgColor4;
+      border-color: darken($bgColor4, 50);
+    }
+    .btn-default:hover, btn-default:focus {
+      background-color: darken($bgColor4, 10);
+    }
+    .btn-default:active {
+      background-color: darken($bgColor4, 20);
+      color: $bgColor3;
+    }
+  }
+}
+
+.alert-info {
+  background-color: lighten($bgColor4, 7);
+}
