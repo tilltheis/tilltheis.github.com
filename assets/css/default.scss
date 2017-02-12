@@ -14,72 +14,37 @@ body {
   color: $fgColor;
   font-size: 16px;
   font-family: "PT Sans", "Helvetica Neue", "sans-serif";
-  -moz-osx-font-smoothing: grayscale; /* don't let ff draw fonts too bold */
+  -moz-osx-font-smoothing: grayscale; // don't let ff draw fonts too bold
 }
 
 header {
   font-family: "Lato", "Helvetica Neue", "sans-serif";
-}
 
-header h1 {
-  letter-spacing: 1px;
-}
-
-header h1 a:active, header h1 a:hover, header h1 a:focus {
-  background: none;
-}
-
-.project {
-  h3 {
-    font-family: "Lato";
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 0;
+  h1 {
+    letter-spacing: 1px;
   }
 
-  img {
-    margin: 0 10px 0 0;
-    float: left;
+  a, a:active, a:hover, a:focus {
+    color: $fgColor;
+    text-decoration: none;
+    background: none;
   }
 
-  p {
-    margin: 0;
+  nav .nav li {
+    a {
+      color: $fgColor;
+      background: transparent;
+    }
+
+    a:hover, a:focus {
+      background: $bgColor1;
+      color: $fgColor;
+    }
+
+    a:active {
+      background: darken($bgColor1, 10);
+    }
   }
-}
-
-.projects a {
-  display: block;
-}
-
-a, a:focus, .nav li a {
-  color: $fgColor;
-  background: transparent;
-}
-
-a:hover, .nav li a:hover, .nav li a:focus {
-  background: $bgColor1;
-  color: $fgColor;
-}
-
-a:active, .nav li a:active {
-  background: darken($bgColor1, 10);
-}
-
-a, a:hover, a:active, a:focus {
-  text-decoration: none;
-}
-
-.panel-default, .panel-default:active {
-  background: transparent;
-}
-
-.well {
-  background: lighten($bgColor1, 2);
-}
-
-footer {
-  text-align: center;
-  margin-bottom: 20px;
 }
 
 .summary {
@@ -93,19 +58,19 @@ footer {
       color: $fgColor;
       border-color: darken($bgColor5, 50);
     }
-    .btn-primary:hover, btn-primary:focus {
+    .btn-primary:hover, .btn-primary:focus {
       background-color: darken($bgColor5, 10);
     }
     .btn-primary:active {
       background-color: darken($bgColor5, 20);
       color: $bgColor3;
     }
-    
+
     .btn-default {
       background-color: $bgColor4;
       border-color: darken($bgColor4, 50);
     }
-    .btn-default:hover, btn-default:focus {
+    .btn-default:hover, .btn-default:focus {
       background-color: darken($bgColor4, 10);
     }
     .btn-default:active {
@@ -115,10 +80,86 @@ footer {
   }
 }
 
-.alert-info {
-  background-color: lighten($bgColor4, 7);
+
+main {
+  a {
+    color: $fgColor;
+    text-decoration: none;
+    border-bottom: 1px solid $bgColor2;
+    text-decoration: none;
+  }
+
+  a:hover, a:focus {
+    color: $fgColor;
+    text-decoration: none;
+    background-color: darken($bgColor2, 0);
+    border-bottom: 1px solid darken($bgColor2, 0);
+  }
+
+  a:active {
+    color: $fgColor;
+    text-decoration: none;
+    background-color: darken($bgColor2, 10);
+    border-bottom: 1px solid darken($bgColor2, 10);
+  }
+
+  .alert-info {
+    background-color: lighten($bgColor4, 7);
+  }
+
+  ul.keywords li:before {
+    content: "#";
+  }
+
+  .projects {
+    h3 {
+      font-family: "Lato";
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 0;
+    }
+
+    img {
+      margin: 0 10px 0 0;
+      float: left;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    a, a:hover, a:active, a:focus {
+      display: block;
+      background: none;
+      border-bottom: none;
+    }
+
+    a .panel {
+      border-color: #ddd;
+    }
+
+    a:hover .panel, a:focus .panel {
+      background: $bgColor1;
+      color: $fgColor;
+    }
+
+    a:active .panel {
+      background: darken($bgColor1, 10);
+      border-color: darken(#ddd, 10);
+    }
+
+    .panel-default, .panel-default:active {
+      background: transparent;
+    }
+  }
 }
 
-ul.keywords li:before {
-  content: "#";
+footer {
+  .well {
+    text-align: left;
+    background: lighten($bgColor1, 2);
+  }
+
+  text-align: center;
+  margin-bottom: 20px;
 }
