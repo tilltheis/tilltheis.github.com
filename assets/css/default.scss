@@ -152,6 +152,52 @@ main {
       background: transparent;
     }
   }
+
+  .pileThePieces {
+    #field {
+      background: url(/pile-the-pieces/pile-the-pieces/img/field.png);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+
+    #nextPiece {
+      background: url(/pile-the-pieces/pile-the-pieces/img/field.png);
+      width: 80px;
+      height: 80px;
+      margin: auto;
+    }
+
+    #game {
+      position: relative;
+      width: 216px;
+      height: 416px;
+      vertical-align: middle;
+    }
+
+    #status {
+      width: 200px;
+      position: absolute;
+      top: 181px;
+      background: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      color: #fff;
+      height: 38px;
+      line-height: 30px;
+      font-size: 30px;
+      vertical-align: middle;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-width: 1px 0;
+    }
+
+    h4 {
+      font-weight: bold;
+      margin: 0 0 5px 0;
+    }
+  }
 }
 
 footer {

@@ -1,0 +1,188 @@
+---
+layout: default
+actions:
+  - title: View JavaScript Source
+    url: https://github.com/tilltheis/pile-the-pieces
+---
+{% include project-summary.html project=site.data.projects.pileThePieces actions=page.actions %}
+
+<div class="row pileThePieces">
+  <div class="col-md-4">
+    <table class="table table-bordered">
+      <tr>
+        <td rowspan="7" id="game">
+            <canvas id="field"></canvas>
+            <div id="status"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <canvas id="nextPiece"></canvas>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h4>Score</h4>
+          <div id="score">0</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h4>Highscore</h4>
+          <div id="highscore">0</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h4>Level</h4>
+          <div id="level">1</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h4>Cleared Lines</h4>
+          <div id="clearedLines">0</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h4>Elapsed Time</h4>
+          <div id="elapsedTime">00:00:00</div>
+        </td>
+      </table>
+    </div>
+
+  <div class="col-md-4">
+    <form class="form-horizontal">
+      <fieldset>
+        <legend>Game</legend>
+
+        <div class="form-group">
+          <label for="startLevel" class="col-sm-4 control-label">Start Level</label>
+          <div class="col-sm-8">
+            <input id="startLevel" type="number" min="1" value="1" class="form-control">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-12">
+            <button type="button" id="togglePause" class="btn btn-default form-control">Pause</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-12">
+            <button type="button" id="startStop" class="btn btn-default form-control">Stop</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-12">
+            <button type="button" id="resetHighscore" class="btn btn-default form-control">Reset Highscore</button>
+          </div>
+        </div>
+      </fieldset>
+
+    </form>
+  </div>
+
+  <div class="col-md-4">
+    <form class="form-horizontal">
+      <fieldset>
+        <legend>Controls</legend>
+
+        <div class="form-group">
+          <label for="keyLayouts" class="col-sm-4 control-label">Layout</label>
+          <div class="col-sm-8">
+            <select id="keyLayouts" class="form-control control">
+              <option id="numpadKeyLayout" value="numpad">Numpad</option>
+              <option id="notebookKeyLayout" value="notebook">Notebook</option>
+              <option id="arrowsKeyLayout" value="arrows">Arrows</option>
+              <option id="wasdKeyLayout" value="wasd">WASD</option>
+              <option id="customKeyLayout" value="custom">Custom</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="hardDropKey" class="col-sm-4 control-label">Hard Drop</label>
+          <div class="col-sm-8">
+            <input id="hardDropKey" value="EMPTY" class="form-control control">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="moveDownKey" class="col-sm-4 control-label">Soft Drop</label>
+          <div class="col-sm-8">
+            <input id="moveDownKey" value="EMPTY" class="form-control control">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="moveLeftKey" class="col-sm-4 control-label">Move Left</label>
+          <div class="col-sm-8">
+            <input id="moveLeftKey" value="EMPTY" class="form-control control">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="moveRightKey" class="col-sm-4 control-label">Move Right</label>
+          <div class="col-sm-8">
+            <input id="moveRightKey" value="EMPTY" class="form-control control">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="rotateLeftKey" class="col-sm-4 control-label">Rotate  Left</label>
+          <div class="col-sm-8">
+            <input id="rotateLeftKey" value="EMPTY" class="form-control control">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="rotateRightKey" class="col-sm-4 control-label">Rotate Right</label>
+          <div class="col-sm-8">
+            <input id="rotateRightKey" value="EMPTY" class="form-control control">
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+
+<div style="display: none;">
+    <img id="iPieceImg" src="pile-the-pieces/img/iPiece.png">
+    <img id="jPieceImg" src="pile-the-pieces/img/jPiece.png">
+    <img id="lPieceImg" src="pile-the-pieces/img/lPiece.png">
+    <img id="oPieceImg" src="pile-the-pieces/img/oPiece.png">
+    <img id="sPieceImg" src="pile-the-pieces/img/sPiece.png">
+    <img id="tPieceImg" src="pile-the-pieces/img/tPiece.png">
+    <img id="zPieceImg" src="pile-the-pieces/img/zPiece.png">
+    <img id="shadowPieceImg" src="pile-the-pieces/img/shadowPiece.png">
+</div>
+
+<script src="pile-the-pieces/src/util.js"></script>
+<script src="pile-the-pieces/src/eventManager.js"></script>
+<script src="pile-the-pieces/src/game.js"></script>
+<script src="pile-the-pieces/src/inputManager.js"></script>
+<script src="pile-the-pieces/src/gameBindings.js"></script>
+<script src="pile-the-pieces/src/userBindings.js"></script>
+<script>
+var elements = {};
+
+var els = document.getElementsByTagName('*');
+var el;
+for (var i = 0, l = els.length; i < l; ++i) {
+    el = els[i];
+
+    if (el.id) {
+        elements[el.id] = el;
+    }
+}
+
+
+var field = new Field();
+var game = new Game(field);
+
+
+setupGameStorage();
+setupGameBindings(game, field, elements);
+setupUserStorage();
+setupUserBindings(game, elements);
+
+game.start(parseInt(localStorage.startLevel, 10));
+</script>

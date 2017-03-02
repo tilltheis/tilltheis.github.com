@@ -1,0 +1,3 @@
+[submodule "pile-the-pieces/pile-the-pieces"]
+	path = pile-the-pieces/pile-the-pieces
+	url = git@github.com:tilltheis/pile-the-pieces.git
