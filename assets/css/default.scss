@@ -126,6 +126,13 @@ main {
 
     p {
       margin: 0;
+      margin-bottom: 20px;
+    }
+
+    small {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
     }
 
     a, a:hover, a:active, a:focus {
@@ -136,6 +143,7 @@ main {
 
     a .panel {
       border-color: #ddd;
+      position: relative;
     }
 
     a:hover .panel, a:focus .panel {
@@ -148,7 +156,7 @@ main {
       border-color: darken(#ddd, 10);
     }
 
-    .panel-default, .panel-default:active {
+    a .panel-default, a .panel-default:active {
       background: transparent;
     }
   }

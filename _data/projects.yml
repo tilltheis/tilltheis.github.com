@@ -3,33 +3,47 @@ typingChallenge:
   icon:        /assets/icons/typing-challenge-icon.png
   title:       Typing Challenge
   description: How fast can you type?
+  technology:  JavaScript
+  year:        2016
 typedRescue:
   path:        typed-rescue
   icon:        /assets/icons/typed-rescue-icon.png
   title:       Typed Rescue
   description: Simple 2D side-scroller.
+  technology:  TypeScript
+  year:        2016
 fullscreenClock:
   path:        fullscreenclock
   icon:        /assets/icons/fullscreenclock-icon.png
   title:       Fullscreen Clock
   description: Automatically display a clock on all of your inactive screens when running an application in fullscreen mode.
+  technology:  MacRuby & Objective-C
+  year:        2012-2014
 pileThePieces:
   path:        pile-the-pieces
   icon:        /assets/icons/pile-the-pieces-icon.png
   title:       Pile the Pieces
   description: You know this game. Play it in your browser now without any plugins. It's implemented using the latest HTML5 technology.
+  technology:  JavaScript
+  year:        2010
 propositionalLogic:
   path:        propositional-logic
   icon:        /assets/icons/propositional-logic-icon.png
   title:       Propositional Logic
   description: Generate all the normal forms for a given formula.
+  technology:  Haskell
+  year:        2012
 bachelorThesis:
   path:        bachelor-thesis
   icon:        /assets/icons/bachelor-thesis-icon.png
   title:       Bachelor Thesis
   description: Das Play-Framework und dessen Einsatz zur Entwicklung von Real-Time-Web-Anwendungen (en. The Play Framework and its Use for Developing Real-Time Web Applications) is the title of my bachelor thesis in computer science (German).
+  technology:  Scala & LaTeX
+  year:        2013
 timetableWidget:
   path:        timetable-widget
   icon:        /assets/icons/timetable-widget-icon.png
   title:       Timetable Widget
   description: Display your timetable on your dashboard. Never miss a class again (without wanting to).
+  technology:  JavaScript
+  year:        2010
