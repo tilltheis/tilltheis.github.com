@@ -112,6 +112,23 @@ main {
   }
 
   .projects {
+    .project {
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: 768px) {
+      @supports (display: grid) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+
+        .project {
+          margin: 0;
+        }
+      }
+    }
+
     h3 {
       font-family: "Lato";
       font-size: 20px;
@@ -137,26 +154,24 @@ main {
 
     a, a:hover, a:active, a:focus {
       display: block;
-      background: none;
-      border-bottom: none;
     }
 
-    a .panel {
+    a.panel {
       border-color: #ddd;
       position: relative;
     }
 
-    a:hover .panel, a:focus .panel {
+    a:hover.panel, a:focus.panel {
       background: $bgColor1;
       color: $fgColor;
     }
 
-    a:active .panel {
+    a:active.panel {
       background: darken($bgColor1, 10);
       border-color: darken(#ddd, 10);
     }
 
-    a .panel-default, a .panel-default:active {
+    a.panel-default, a.panel-default:active {
       background: transparent;
     }
   }
@@ -215,5 +230,5 @@ footer {
   }
 
   text-align: center;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }

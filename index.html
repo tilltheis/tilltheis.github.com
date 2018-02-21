@@ -1,42 +1,21 @@
 ---
 layout: default
 ---
-<div class="row projects">
+<div class="projects">
 
   {% for projectHash in site.data.projects %}
     {% assign project = projectHash[1] %}
 
-    <div class="col-md-6">
-      <a href="/{{ project.path }}/">
-        <div class="panel panel-default project">
-          <div class="panel-body">
-            <img src="{{ project.icon }}" alt="{{ project.title }} Icon" width="128" height="128">
-            <h3>{{ project.title }}</h3>
-            <p>{{ project.description }}</p>
-            <small>{{ project.technology }}, {{ project.year }}</small>
-          </div>
+      <a href="/{{ project.path }}/" class="panel panel-default project">
+        <div class="panel-body">
+          <img src="{{ project.icon }}" alt="{{ project.title }} Icon" width="128" height="128">
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.description }}</p>
+          <small>{{ project.technology }}, {{ project.year }}</small>
         </div>
       </a>
-    </div>
 
   {% endfor %}
 
 
 </div>
-
-<script>
-  // Beauty has its price...
-  // Make all project thumbnails in a row the same height.
-  window.onresize = function() {
-    var thumbnails = document.querySelectorAll('.project');
-    [].forEach.call(thumbnails, function(x) { x.style.height = null; });
-    if (window.innerWidth >= 768) {
-      for (var i = 0; i < thumbnails.length - 1; i += 2) {
-        var maxHeight = Math.max(thumbnails[i].offsetHeight, thumbnails[i + 1].offsetHeight);
-        thumbnails[i].style.height = maxHeight + 'px';
-        thumbnails[i + 1].style.height = maxHeight + 'px';
-      }
-    }
-  };
-  window.onload = window.onresize;
-</script>
