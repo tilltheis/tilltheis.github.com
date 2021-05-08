@@ -1,10 +1,10 @@
 slugfest:
-  path:        slugfest
-  icon:        /assets/icons/slugfest.png
-  title:       Slugfest
-  description: Steer a slug and win against your opponents. Online and offline mulitplayer mode. Very much work in progress.
-  technology:  Scala & Akka
-  year:        2017
+  path:        tft-comps
+  icon:        /assets/icons/tft-comps-icon.png
+  title:       TFT Composition Generator
+  description: Teamfight Tactics Team Composition Generator for Set&nbsp;3.5.
+  technology:  Scala & React
+  year:        2020
 typingChallenge:
   path:        TypingChallenge
   icon:        /assets/icons/typing-challenge-icon.png
