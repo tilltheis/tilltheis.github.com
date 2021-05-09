@@ -6,14 +6,14 @@ layout: default
   {% for projectHash in site.data.projects %}
     {% assign project = projectHash[1] %}
 
-      <a href="/{{ project.path }}/" class="panel panel-default project">
-        <div class="panel-body">
+      <div class="panel project">
+        <a href="/{{ project.path }}/" class="panel-body">
           <img src="{{ project.icon }}" alt="{{ project.title }} Icon" width="128" height="128">
           <h3>{{ project.title }}</h3>
           <p>{{ project.description }}</p>
-          <small>{{ project.technology }}, {{ project.year }}</small>
-        </div>
-      </a>
+        </a>
+        <small><a href="https://github.com/tilltheis/{{ project.path }}">{{ project.technology }}, {{ project.year }}</a></small>
+      </div>
 
   {% endfor %}
 

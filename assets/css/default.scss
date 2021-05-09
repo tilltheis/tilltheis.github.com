@@ -113,6 +113,9 @@ main {
 
   .projects {
     .project {
+      border-color: #ddd;
+      position: relative;
+      background: transparent;
       margin-bottom: 20px;
     }
 
@@ -152,27 +155,21 @@ main {
       right: 10px;
     }
 
-    a, a:hover, a:active, a:focus {
-      display: block;
-    }
+    .project > a {
+      &, &:hover, &:active, &:focus {
+        display: block;
+        height: 100%;
+      }
 
-    a.panel {
-      border-color: #ddd;
-      position: relative;
-    }
+      &:hover, &:focus {
+        background: $bgColor1;
+        color: $fgColor;
+      }
 
-    a:hover.panel, a:focus.panel {
-      background: $bgColor1;
-      color: $fgColor;
-    }
-
-    a:active.panel {
-      background: darken($bgColor1, 10);
-      border-color: darken(#ddd, 10);
-    }
-
-    a.panel-default, a.panel-default:active {
-      background: transparent;
+      &:active {
+        background: darken($bgColor1, 10);
+        border-color: darken(#ddd, 10);
+      }
     }
   }
 
