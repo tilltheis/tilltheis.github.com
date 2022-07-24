@@ -30,9 +30,9 @@ pileThePieces:
   path:        pile-the-pieces
   icon:        /assets/icons/pile-the-pieces-icon.png
   title:       Pile the Pieces
-  description: You know this game. Play it in your browser now without any plugins. It's implemented using the latest HTML5 technology.
+  description: Play Tetris on your phone or computer. The touch controls are very convenient.
   technology:  JavaScript
-  year:        2010
+  year:        2010 & 2022
 propositionalLogic:
   path:        propositional-logic
   icon:        /assets/icons/propositional-logic-icon.png
