@@ -9,6 +9,33 @@ $bgColor3: #F8FCFF; // whitish
 $bgColor4: #D1E8E5; // dark grey blue
 $bgColor5: #BCF2CD; // light green grey blue
 
+@font-face {
+  font-family: "PT Sans";
+  src: url('/assets/fonts/PTSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PT Sans";
+  src: url('/assets/fonts/PTSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url('/assets/fonts/Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato;
+  src: url('/assets/fonts/Lato-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
 body {
   background-color: $bgColor3;
   color: $fgColor;
