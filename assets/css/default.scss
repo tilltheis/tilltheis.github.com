@@ -1,19 +1,18 @@
 ---
 ---
 
-$fgColor: #303f4a;
+$fgColor: #303f4a; // black
+$bgColor: #f8fcff; // white
+$borderColor: #dee0e4; // grey
 
-$bgColor0: #e8fbe1; // green  // nav hover bg
-$bgColor1: #ebf7fe; // blue   // project hover bg
-$bgColor2: #ece3fc; // purple // project source hover bg
-$bgColor9: #fffefc; // yellow // footer bg
-$bgColor3: #f8fcff; // white  // page bg
+$primaryColor1: #e8fbe1; // green // nav hover bg
+$primaryColor2: #ebf7fe; // blue // project hover bg
+$accentColor1: #ece3fc; // purple // project source hover bg
+$accentColor2: #fffefc; // yellow // footer bg
 
 // project detail pages
-$bgColor4: #d1e8e5; // teal  // project page: secondary button + info bg
-$bgColor5: #bcf2cd; // green // project page: primary button
-
-$borderColor: #dee0e4;
+$primaryButtonColor: #bcf2cd; // green // project page: primary button
+$secondaryButtonColor: #d1e8e5; // teal // project page: secondary button + info bg
 
 @font-face {
   font-family: "PT Sans";
@@ -42,7 +41,7 @@ $borderColor: #dee0e4;
 }
 
 body {
-  background-color: $bgColor3;
+  background-color: $bgColor;
   color: $fgColor;
   font-size: 16px;
   font-family: "PT Sans", "Helvetica Neue", "sans-serif";
@@ -73,12 +72,12 @@ header {
 
     a:hover,
     a:focus {
-      background: $bgColor0;
+      background: $primaryColor1;
       color: $fgColor;
     }
 
     a:active {
-      background: darken($bgColor0, 10);
+      background: darken($primaryColor1, 10);
     }
   }
 }
@@ -90,30 +89,30 @@ header {
 
   .actions {
     .btn-primary {
-      background-color: $bgColor5;
+      background-color: $primaryButtonColor;
       color: $fgColor;
-      border-color: darken($bgColor5, 50);
+      border-color: darken($primaryButtonColor, 50);
     }
     .btn-primary:hover,
     .btn-primary:focus {
-      background-color: darken($bgColor5, 10);
+      background-color: darken($primaryButtonColor, 10);
     }
     .btn-primary:active {
-      background-color: darken($bgColor5, 20);
-      color: $bgColor3;
+      background-color: darken($primaryButtonColor, 20);
+      color: $bgColor;
     }
 
     .btn-default {
-      background-color: $bgColor4;
-      border-color: darken($bgColor4, 50);
+      background-color: $secondaryButtonColor;
+      border-color: darken($secondaryButtonColor, 50);
     }
     .btn-default:hover,
     .btn-default:focus {
-      background-color: darken($bgColor4, 10);
+      background-color: darken($secondaryButtonColor, 10);
     }
     .btn-default:active {
-      background-color: darken($bgColor4, 20);
-      color: $bgColor3;
+      background-color: darken($secondaryButtonColor, 20);
+      color: $bgColor;
     }
   }
 }
@@ -122,7 +121,7 @@ main {
   a {
     color: $fgColor;
     text-decoration: none;
-    border-bottom: 1px solid $bgColor2;
+    border-bottom: 1px solid $accentColor1;
     text-decoration: none;
   }
 
@@ -130,19 +129,19 @@ main {
   a:focus {
     color: $fgColor;
     text-decoration: none;
-    background-color: $bgColor2;
-    border-bottom: 1px solid $bgColor2;
+    background-color: $accentColor1;
+    border-bottom: 1px solid $accentColor1;
   }
 
   a:active {
     color: $fgColor;
     text-decoration: none;
-    background-color: darken($bgColor2, 10);
-    border-bottom: 1px solid darken($bgColor2, 10);
+    background-color: darken($accentColor1, 10);
+    border-bottom: 1px solid darken($accentColor1, 10);
   }
 
   .alert-info {
-    background-color: lighten($bgColor4, 7);
+    background-color: lighten($secondaryButtonColor, 7);
   }
 
   ul.keywords li:before {
@@ -204,12 +203,12 @@ main {
 
       &:hover,
       &:focus {
-        background: $bgColor1;
+        background: $primaryColor2;
         color: $fgColor;
       }
 
       &:active {
-        background: darken($bgColor1, 10);
+        background: darken($primaryColor2, 10);
         border-color: darken($borderColor, 10);
       }
     }
@@ -265,7 +264,7 @@ main {
 footer {
   .well {
     text-align: left;
-    background: $bgColor9;
+    background: $accentColor2;
   }
 
   text-align: center;
