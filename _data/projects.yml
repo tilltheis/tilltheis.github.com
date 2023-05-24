@@ -3,7 +3,7 @@ slugfest:
   url:         https://tft-comps.com
   icon:        /assets/icons/tft-comps-icon.png
   title:       TFT Composition Generator
-  description: Teamfight Tactics Team Composition Generator for Set&nbsp;3.5.
+  description: Teamfight Tactics Team Composition Generator for Set&nbsp;8.
   technology:  Scala & React
   year:        2020
 typingChallenge:
