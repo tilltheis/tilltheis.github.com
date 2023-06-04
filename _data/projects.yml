@@ -1,7 +1,17 @@
-slugfest:
+blocks:
+  repository:  blocks
+  url:         https://github.com/tilltheis/blocks
+  icon:        /assets/img/blocks-icon.png
+  preview:     /assets/img/blocks-preview.png
+  title:       Blocks
+  description: Minecraft-style World Generator
+  technology:  Java
+  year:        2022
+tftComps:
   repository:  tft-comps
   url:         https://tft-comps.com
-  icon:        /assets/icons/tft-comps-icon.png
+  icon:        /assets/img/tft-comps-icon.png
+  preview:     /assets/img/tft-comps-preview.png
   title:       TFT Composition Generator
   description: Teamfight Tactics Team Composition Generator for Set&nbsp;8.
   technology:  Scala & React
@@ -9,7 +19,7 @@ slugfest:
 typingChallenge:
   repository:  TypingChallenge
   url:         /TypingChallenge
-  icon:        /assets/icons/typing-challenge-icon.png
+  icon:        /assets/img/typing-challenge-icon.png
   title:       Typing Challenge
   description: How fast can you type?
   technology:  JavaScript
@@ -17,7 +27,7 @@ typingChallenge:
 typedRescue:
   repository:  typed-rescue
   url:         /typed-rescue
-  icon:        /assets/icons/typed-rescue-icon.png
+  icon:        /assets/img/typed-rescue-icon.png
   title:       Typed Rescue
   description: Simple 2D side-scroller.
   technology:  TypeScript
@@ -25,7 +35,7 @@ typedRescue:
 fullscreenClock:
   repository:  fullscreenclock
   url:         /fullscreenclock
-  icon:        /assets/icons/fullscreenclock-icon.png
+  icon:        /assets/img/fullscreenclock-icon.png
   title:       Fullscreen Clock
   description: Automatically display a clock on all of your inactive screens when running an application in fullscreen mode.
   technology:  MacRuby & Objective-C
@@ -33,7 +43,7 @@ fullscreenClock:
 pileThePieces:
   repository:  pile-the-pieces
   url:         /pile-the-pieces
-  icon:        /assets/icons/pile-the-pieces-icon.png
+  icon:        /assets/img/pile-the-pieces-icon.png
   title:       Pile the Pieces
   description: Play Tetris on your phone or computer. The touch controls are very convenient.
   technology:  JavaScript
@@ -41,7 +51,7 @@ pileThePieces:
 propositionalLogic:
   repository:  propositional-logic
   url:         /propositional-logic
-  icon:        /assets/icons/propositional-logic-icon.png
+  icon:        /assets/img/propositional-logic-icon.png
   title:       Propositional Logic
   description: Generate all the normal forms for a given formula.
   technology:  Haskell
@@ -49,15 +59,16 @@ propositionalLogic:
 bachelorThesis:
   repository:  bachelor-thesis
   url:         /bachelor-thesis
-  icon:        /assets/icons/bachelor-thesis-icon.png
+  icon:        /assets/img/bachelor-thesis-icon.png
+  preview:     /assets/img/bachelor-thesis-preview.png
   title:       Bachelor Thesis
-  description: Das Play-Framework und dessen Einsatz zur Entwicklung von Real-Time-Web-Anwendungen (en. The Play Framework and its Use for Developing Real-Time Web Applications) is the title of my bachelor thesis in computer science (German).
+  description: Das Play-Framework und dessen Einsatz zur Entwicklung von Real-Time-Web-Anwendungen (en. The Play Framework and its Use for Developing Real-Time Web Applications) is my bachelor thesis in computer science.
   technology:  Scala & LaTeX
   year:        2013
 timetableWidget:
   repository:  timetable-widget
   url:         /timetable-widget
-  icon:        /assets/icons/timetable-widget-icon.png
+  icon:        /assets/img/timetable-widget-icon.png
   title:       Timetable Widget
   description: Display your timetable on your dashboard. Never miss a class again (without wanting to).
   technology:  JavaScript

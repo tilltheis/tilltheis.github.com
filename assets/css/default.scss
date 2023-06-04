@@ -122,27 +122,6 @@ header {
 }
 
 main {
-  a {
-    color: $fgColor;
-    text-decoration: none;
-    border-bottom: 1px solid $accentColor1;
-  }
-
-  a:hover,
-  a:focus {
-    color: $fgColor;
-    text-decoration: none;
-    background-color: $accentColor1;
-    border-bottom: 1px solid $accentColor1;
-  }
-
-  a:active {
-    color: $fgColor;
-    text-decoration: none;
-    background-color: darken($accentColor1, 10);
-    border-bottom: 1px solid darken($accentColor1, 10);
-  }
-
   .alert-info {
     background-color: lighten($secondaryButtonColor, 7);
   }
@@ -152,59 +131,63 @@ main {
   }
 
   .projects {
+    display: grid;
+    gap: 10px 10px;
+    grid-template-areas:
+      "tft-comps           tft-comps           tft-comps           tft-comps           typing-challenge typing-challenge typing-challenge typed-rescue     typed-rescue     typed-rescue     "
+      "tft-comps           tft-comps           tft-comps           tft-comps           typing-challenge typing-challenge typing-challenge typed-rescue     typed-rescue     typed-rescue     "
+      "tft-comps           tft-comps           tft-comps           tft-comps           fullscreen-clock fullscreen-clock fullscreen-clock fullscreen-clock fullscreen-clock fullscreen-clock "
+      "tft-comps           tft-comps           tft-comps           tft-comps           fullscreen-clock fullscreen-clock fullscreen-clock fullscreen-clock fullscreen-clock fullscreen-clock "
+      "blocks              blocks              blocks              blocks              blocks           blocks           blocks           blocks           blocks           blocks           "
+      "blocks              blocks              blocks              blocks              blocks           blocks           blocks           blocks           blocks           blocks           "
+      "blocks              blocks              blocks              blocks              blocks           blocks           blocks           blocks           blocks           blocks           "
+      "blocks              blocks              blocks              blocks              blocks           blocks           blocks           blocks           blocks           blocks           "
+      "blocks              blocks              blocks              blocks              blocks           blocks           blocks           blocks           blocks           blocks           "
+      "blocks              blocks              blocks              blocks              blocks           blocks           blocks           blocks           blocks           blocks           "
+      "pile-the-pieces     pile-the-pieces     pile-the-pieces     pile-the-pieces     bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  "
+      "pile-the-pieces     pile-the-pieces     pile-the-pieces     pile-the-pieces     bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  "
+      "propositional-logic propositional-logic propositional-logic propositional-logic bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  "
+      "propositional-logic propositional-logic propositional-logic propositional-logic bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  "
+      "timetable-widget    timetable-widget    timetable-widget    timetable-widget    bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  "
+      "timetable-widget    timetable-widget    timetable-widget    timetable-widget    bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  "
+      ;
+
+    grid-template-columns: repeat(10, calc((1140px - 9 * 10px) / 10));
+
     .project {
       border-color: $borderColor;
       position: relative;
       background: transparent;
-      margin-bottom: 20px;
       box-shadow: none;
-    }
+      box-shadow: 0 0 19px -11px #7e7e7e;
+      border-radius: 4px;
+      padding: 15px;
 
-    @media (min-width: 768px) {
-      @supports (display: grid) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
+      // @media (min-width: 768px) {
+      //   @supports (display: grid) {
+      //     display: grid;
+      //     grid-template-columns: 1fr 1fr;
+      //     grid-column-gap: 20px;
+      //     grid-row-gap: 20px;
 
-        .project {
-          margin: 0;
-        }
-      }
-    }
+      //     .project {
+      //       margin: 0;
+      //     }
+      //   }
+      // }
 
-    h3 {
-      font-family: "Lato";
-      font-size: 20px;
-      font-weight: bold;
-      margin-top: 0;
-    }
-
-    img {
-      margin: 0 10px 0 0;
-      float: left;
-    }
-
-    p {
-      margin: 0;
-      margin-bottom: 20px;
-    }
-
-    small {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-    }
-
-    .project > a {
-      &,
-      &:hover,
-      &:active,
-      &:focus {
-        display: block;
-        height: 100%;
-        border: none;
-      }
+      display: grid;
+      align-content: start;
+      column-gap: 10px;
+      grid-template-areas:
+        "icon    title"
+        "icon    ."
+        "icon    description"
+        "icon    code"
+        "preview preview"
+        ;
+      grid-template-rows: min-content 10px 1fr min-content min-content;
+      grid-template-columns: min-content 1fr;
 
       &:hover,
       &:focus {
@@ -215,6 +198,111 @@ main {
       &:active {
         background: darken($primaryColor2, 10);
         border-color: darken($borderColor, 10);
+      }
+
+      a {
+        position: relative;
+        z-index: 1;
+      }
+
+      .title > a {
+        position: static;
+        color: inherit;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+        }
+
+        &:hover, &:focus, &:active {
+          text-decoration: none;
+        }
+      }
+
+      .title {
+        grid-area: title;
+        font-family: "Lato";
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .icon {
+        grid-area: icon;
+        float: left;
+      }
+
+      .preview {
+        grid-area: preview;
+        width: calc(100% + 30px);
+        margin: 5px -15px -15px;
+        border-radius: 0 0 4px 4px;
+      }
+
+      .description {
+        grid-area: description;
+        align-self: stretch;
+        margin: 0;
+        padding: 0;
+      }
+
+      .code {
+        grid-area: code;
+        margin: 0;
+        padding: 0;
+
+        a {
+          color: $fgColor;
+          text-decoration: none;
+          border-bottom: 1px solid $accentColor1;
+        }
+
+        a:hover,
+        a:focus {
+          color: $fgColor;
+          text-decoration: none;
+          background-color: $accentColor1;
+          border-bottom: 1px solid $accentColor1;
+        }
+
+        a:active {
+          color: $fgColor;
+          text-decoration: none;
+          background-color: darken($accentColor1, 10);
+          border-bottom: 1px solid darken($accentColor1, 10);
+        }
+      }
+
+      &.blocks {
+        grid-area: blocks;
+      }
+      &.tftComps {
+        grid-area: tft-comps;
+      }
+      &.typingChallenge {
+        grid-area: typing-challenge;
+      }
+      &.typedRescue {
+        grid-area: typed-rescue;
+      }
+      &.fullscreenClock {
+        grid-area: fullscreen-clock;
+      }
+      &.pileThePieces {
+        grid-area: pile-the-pieces;
+      }
+      &.propositionalLogic {
+        grid-area: propositional-logic;
+      }
+      &.bachelorThesis {
+        grid-area: bachelor-thesis;
+      }
+      &.timetableWidget {
+        grid-area: timetable-widget;
       }
     }
   }
