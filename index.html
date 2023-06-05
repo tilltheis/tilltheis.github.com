@@ -10,8 +10,8 @@ layout: default
       <div class="project {{ name }}">
         <img class="icon" src="{{ project.icon }}" alt="{{ project.title }} Icon" width="128" height="128">
         <h3 class="title"><a href="{{ project.url }}">{{ project.title }}</a></h3>
-        <p class="description">{{ project.description }}</p>
         <p class="code"><a href="https://github.com/tilltheis/{{ project.repository }}">{{ project.technology }}, {{ project.year }}</a></p>
+        <p class="description">{{ project.description }}</p>
         {% if project.preview %}
         <img class="preview" src="{{ project.preview }}" alt="{{ project.title }} Preview" />
         {% endif %}
