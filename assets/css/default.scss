@@ -450,4 +450,45 @@ footer {
 
   text-align: center;
   margin: 20px 0;
+
+  .legal {
+    position: relative;
+
+    summary {
+      cursor: pointer;
+      display: inline;
+      position: relative;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+
+      &::after {
+        content: "";
+        border-bottom: 1px dashed #888;
+
+        position: absolute;
+        bottom: 3px;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    .notice {
+      display: block;
+      position: absolute;
+      bottom: 23px;
+      left: 0;
+      right: 0;
+
+      background-color: lighten($bgColor, 1);
+      padding: 10px;
+      border: 1px solid $borderColor;
+      border-radius: 4px;
+      text-align: left;
+
+      z-index: 1;
+    }
+  }
 }
