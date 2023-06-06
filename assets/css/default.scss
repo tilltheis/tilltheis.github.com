@@ -121,8 +121,9 @@ header {
   }
 }
 
-.container {
+.root {
   min-width: 320px;
+  max-width: 1140px;
 }
 
 main {
@@ -148,9 +149,6 @@ main {
           ;
         grid-template-columns: repeat(2, 1fr);
 
-        .blocks {
-          grid-area: blocks;
-        }
         .tftComps {
           grid-area: tft-comps;
         }
@@ -159,6 +157,9 @@ main {
         }
         .typedRescue {
           grid-area: typed-rescue;
+        }
+        .blocks {
+          grid-area: blocks;
         }
         .fullscreenClock {
           grid-area: fullscreen-clock;
@@ -303,11 +304,11 @@ main {
       align-content: start;
       column-gap: 5px;
       grid-template-areas:
-        "icon    title"
-        "icon    code"
-        ".       ."
-        "description    description"
-        "preview preview"
+        "icon           title       "
+        "icon           code        "
+        ".              .           "
+        "description    description "
+        "preview        preview     "
         ;
       grid-template-rows: 1fr min-content 5px min-content min-content;
       grid-template-columns: min-content 1fr;
@@ -318,12 +319,12 @@ main {
 
         column-gap: 10px;
         grid-template-areas:
-          "icon    title"
-          "icon    ."
-          "icon    code"
-          "icon    ."
-          "icon    description"
-          "preview preview"
+          "icon    title       "
+          "icon    .           "
+          "icon    code        "
+          "icon    .           "
+          "icon    description "
+          "preview preview     "
           ;
         grid-template-rows: min-content 5px min-content 10px 1fr min-content;
 
@@ -334,12 +335,29 @@ main {
 
         .title {
           display: block;
-          height: auto;
         }
 
         .preview {
           width: calc(100% + 20px);
           margin: 10px -10px -10px;
+        }
+
+        &:has(.preview.small) {
+          grid-template-areas:
+            "icon    title       . preview preview "
+            "icon    .           . preview preview "
+            "icon    code        . preview preview "
+            "icon    .           . preview preview "
+            "icon    description . preview preview "
+            ;
+          grid-template-rows: min-content 5px min-content 10px 1fr;
+          grid-template-columns: min-content 1fr 10px 1fr 96px;
+
+          .preview.small {
+            width: 100%;
+            margin: 0;
+            align-self: center;
+          }
         }
       }
 
@@ -354,6 +372,24 @@ main {
         .preview {
           width: calc(100% + 30px);
           margin: 15px -15px -15px;
+        }
+
+        &:has(.preview.small) {
+          grid-template-areas:
+            "icon    title       "
+            "icon    .           "
+            "icon    code        "
+            "icon    .           "
+            "icon    description "
+            "preview preview     "
+            ;
+          grid-template-rows: min-content 5px min-content 10px 1fr min-content;
+          grid-template-columns: min-content 1fr;
+
+          .preview.small {
+            width: calc(100% + 30px);
+            margin: 15px -15px -15px;
+          }
         }
       }
     }
