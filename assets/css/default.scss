@@ -14,6 +14,9 @@ $accentColor2: #fffefc; // yellow // footer bg
 $primaryButtonColor: #bcf2cd; // green // project page: primary button
 $secondaryButtonColor: #d1e8e5; // teal // project page: secondary button + info bg
 
+$mediumBreakpoint: 650px;
+$largeBreakpoint: 1005px;
+
 @font-face {
   font-family: "PT Sans";
   src: url("/assets/fonts/PTSans-Regular.ttf") format("truetype");
@@ -66,6 +69,45 @@ header {
     color: $fgColor;
     text-decoration: none;
     background: none;
+  }
+
+  nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      display: flex;
+      column-gap: 5px;
+      justify-content: space-between;
+
+      li {
+        a {
+          padding: 10px;
+          display: block;
+          color: $fgColor;
+        }
+
+        a:hover,
+        a:focus {
+          background: $primaryColor1;
+          color: $fgColor;
+        }
+
+        a:active {
+          background: darken($primaryColor1, 10);
+        }
+      }
+
+      @media (min-width: $mediumBreakpoint) {
+        column-gap: 0;
+
+        li {
+          flex-grow: 1;
+          flex-basis: 0;
+        }
+      }
+    }
   }
 
   nav .nav li {
@@ -124,6 +166,9 @@ header {
 .root {
   min-width: 320px;
   max-width: 1140px;
+
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 main {
@@ -136,7 +181,7 @@ main {
   }
 
   .projects {
-      @media (min-width: 768px) {
+      @media (min-width: $mediumBreakpoint) {
         display: grid;
         gap: 10px;
         grid-template-areas:
@@ -178,7 +223,7 @@ main {
         }
       }
 
-      @media (min-width: 1200px) {
+      @media (min-width: $largeBreakpoint) {
         grid-template-areas:
           "tft-comps           tft-comps           tft-comps           tft-comps           typing-challenge typing-challenge typing-challenge typed-rescue     typed-rescue     typed-rescue     "
           "tft-comps           tft-comps           tft-comps           tft-comps           typing-challenge typing-challenge typing-challenge typed-rescue     typed-rescue     typed-rescue     "
@@ -313,7 +358,7 @@ main {
       grid-template-rows: 1fr min-content 5px min-content min-content;
       grid-template-columns: min-content 1fr;
 
-      @media (min-width: 768px) {
+      @media (min-width: $mediumBreakpoint) {
         padding: 10px;
         margin-bottom: 0;
 
@@ -361,7 +406,7 @@ main {
         }
       }
 
-      @media (min-width: 1200px) {
+      @media (min-width: $largeBreakpoint) {
         padding: 15px;
 
         .icon {
