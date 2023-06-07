@@ -8,12 +8,12 @@ layout: default
     {% assign project = projectHash[1] %}
 
       <article class="project {{ name }}">
-        <img class="icon" src="{{ project.icon }}" alt="{{ project.title }} Icon" width="128" height="128">
+        <img class="icon" src="{{ project.icon }}" alt="{{ project.title }} Icon">
         <h2 class="title"><a href="{{ project.url }}">{{ project.title }}</a></h2>
         <p class="code" role="doc-subtitle"><a href="https://github.com/tilltheis/{{ project.repository }}">{{ project.technology }}, {{ project.year }}</a></p>
         <p class="description">{{ project.description }}</p>
         {% if project.preview %}
-        <img class="preview {% if project.smallPreview %}small{% endif %}" src="{{ project.preview }}" alt="{{ project.title }} Preview" />
+        <img class="preview {% if project.smallPreview %}small{% endif %}" src="{{ project.preview }}" alt="{{ project.title }} Preview">
         {% endif %}
       </article>
 
