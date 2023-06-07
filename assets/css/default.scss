@@ -181,69 +181,59 @@ main {
   }
 
   .projects {
-      @media (min-width: $mediumBreakpoint) {
-        display: grid;
-        gap: 10px;
-        grid-template-areas:
-          "tft-comps           tft-comps        "
-          "typed-rescue        typing-challenge "
-          "blocks              blocks           "
-          "fullscreen-clock    pile-the-pieces  "
-          "propositional-logic timetable-widget "
-          "bachelor-thesis     bachelor-thesis  "
-          ;
-        grid-template-columns: repeat(2, 1fr);
+    @media (min-width: $mediumBreakpoint) {
+      display: grid;
+      gap: 10px;
+      grid-template-areas:
+        "tft-comps           tft-comps        "
+        "typed-rescue        typing-challenge "
+        "blocks              blocks           "
+        "fullscreen-clock    pile-the-pieces  "
+        "propositional-logic timetable-widget "
+        "bachelor-thesis     bachelor-thesis  "
+        ;
+      grid-template-columns: repeat(2, 1fr);
 
-        .tftComps {
-          grid-area: tft-comps;
-        }
-        .typingChallenge {
-          grid-area: typing-challenge;
-        }
-        .typedRescue {
-          grid-area: typed-rescue;
-        }
-        .blocks {
-          grid-area: blocks;
-        }
-        .fullscreenClock {
-          grid-area: fullscreen-clock;
-        }
-        .pileThePieces {
-          grid-area: pile-the-pieces;
-        }
-        .propositionalLogic {
-          grid-area: propositional-logic;
-        }
-        .bachelorThesis {
-          grid-area: bachelor-thesis;
-        }
-        .timetableWidget {
-          grid-area: timetable-widget;
-        }
+      .tftComps {
+        grid-area: tft-comps;
       }
+      .typingChallenge {
+        grid-area: typing-challenge;
+      }
+      .typedRescue {
+        grid-area: typed-rescue;
+      }
+      .blocks {
+        grid-area: blocks;
+      }
+      .fullscreenClock {
+        grid-area: fullscreen-clock;
+      }
+      .pileThePieces {
+        grid-area: pile-the-pieces;
+      }
+      .propositionalLogic {
+        grid-area: propositional-logic;
+      }
+      .bachelorThesis {
+        grid-area: bachelor-thesis;
+      }
+      .timetableWidget {
+        grid-area: timetable-widget;
+      }
+    }
 
-      @media (min-width: $largeBreakpoint) {
-        grid-template-areas:
-          "tft-comps           tft-comps           tft-comps           tft-comps           typing-challenge typing-challenge typing-challenge typed-rescue     typed-rescue     typed-rescue     "
-          "tft-comps           tft-comps           tft-comps           tft-comps           typing-challenge typing-challenge typing-challenge typed-rescue     typed-rescue     typed-rescue     "
-          "tft-comps           tft-comps           tft-comps           tft-comps           fullscreen-clock fullscreen-clock fullscreen-clock fullscreen-clock fullscreen-clock fullscreen-clock "
-          "tft-comps           tft-comps           tft-comps           tft-comps           fullscreen-clock fullscreen-clock fullscreen-clock fullscreen-clock fullscreen-clock fullscreen-clock "
-          "blocks              blocks              blocks              blocks              blocks           blocks           blocks           blocks           blocks           blocks           "
-          "blocks              blocks              blocks              blocks              blocks           blocks           blocks           blocks           blocks           blocks           "
-          "blocks              blocks              blocks              blocks              blocks           blocks           blocks           blocks           blocks           blocks           "
-          "blocks              blocks              blocks              blocks              blocks           blocks           blocks           blocks           blocks           blocks           "
-          "blocks              blocks              blocks              blocks              blocks           blocks           blocks           blocks           blocks           blocks           "
-          "blocks              blocks              blocks              blocks              blocks           blocks           blocks           blocks           blocks           blocks           "
-          "pile-the-pieces     pile-the-pieces     pile-the-pieces     pile-the-pieces     bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  "
-          "pile-the-pieces     pile-the-pieces     pile-the-pieces     pile-the-pieces     bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  "
-          "propositional-logic propositional-logic propositional-logic propositional-logic bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  "
-          "propositional-logic propositional-logic propositional-logic propositional-logic bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  "
-          "timetable-widget    timetable-widget    timetable-widget    timetable-widget    bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  "
-          "timetable-widget    timetable-widget    timetable-widget    timetable-widget    bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  "
-          ;
-        grid-template-columns: repeat(10, 1fr);
-      }
+    @media (min-width: $largeBreakpoint) {
+      grid-template-areas:
+        "tft-comps           tft-comps           tft-comps           tft-comps           typing-challenge typing-challenge typing-challenge typed-rescue     typed-rescue     typed-rescue     "
+        "tft-comps           tft-comps           tft-comps           tft-comps           fullscreen-clock fullscreen-clock fullscreen-clock fullscreen-clock fullscreen-clock fullscreen-clock "
+        "blocks              blocks              blocks              blocks              blocks           blocks           blocks           blocks           blocks           blocks           "
+        "pile-the-pieces     pile-the-pieces     pile-the-pieces     pile-the-pieces     bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  "
+        "propositional-logic propositional-logic propositional-logic propositional-logic bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  "
+        "timetable-widget    timetable-widget    timetable-widget    timetable-widget    bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  bachelor-thesis  "
+        ;
+      grid-template-columns: repeat(10, 1fr);
+    }
 
     .project {
       position: relative;
