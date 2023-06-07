@@ -59,7 +59,9 @@ header {
   }
 
   h1 {
-    letter-spacing: 1px;
+    font-size: 42px;
+    letter-spacing: 2px;
+    margin: 20px 0;
   }
 
   a,
@@ -72,6 +74,8 @@ header {
   }
 
   nav {
+    font-size: 18px;
+
     ul {
       margin: 0;
       padding: 0;
