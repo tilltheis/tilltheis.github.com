@@ -396,6 +396,7 @@ main {
             width: 100%;
             margin: 0;
             align-self: center;
+            border-radius: 4px;
           }
         }
       }
@@ -428,6 +429,7 @@ main {
           .preview.small {
             width: calc(100% + 30px);
             margin: 15px -15px -15px;
+            border-radius: 0 0 4px 4px;
           }
         }
       }
